@@ -22,16 +22,16 @@
 }
 
 
-.navbar a 
+.navbar li 
 {
     text-decoration: none;
     display:block;
     text-align: center;
 }
 
-.navbar a:hover
+.navbar li:hover
 {
-    background-color:#111;
+    background-color:#6699ff;
 }
 .navbar li
 {

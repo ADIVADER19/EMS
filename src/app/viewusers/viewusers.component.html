@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">View Users</h1>
+        <div class="filter-controls">
+            <div class="filter-control">
+                <label for="ageFilter">Age:</label>
+                <input type="text" id="ageFilter" [(ngModel)]="ageFilter" placeholder="Enter Age...">
+                <button (click)="filterByAge()" class="filter-button">Filter</button>
+            </div>
+            <div class="filter-control">
+                <label for="nameFilter">Name:</label>
+                <input type="text" id="nameFilter" [(ngModel)]="nameFilter" placeholder="Enter Name...">
+                <button (click)="filterByName()" class="filter-button">Filter</button>
+            </div>
+            <div class="filter-control">
+                <label for="mailFilter">Email Id:</label>
+                <input type="text" id="mailFilter" [(ngModel)]="emailFilter" placeholder="Enter Email...">
+                <button (click)="filterByEmail()" class="filter-button">Filter</button>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone No</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="registeredUsers">
+                <tr *ngFor="let user of registeredUsers">
+                    <td>{{user.firstName}} {{user.lastName}}</td>
+                    <td>{{user.emailId}}</td>
+                    <td>{{user.phoneNo}}</td>
+                    <td>{{user.age}}</td>
+                    <td><button (click)="deleteuser(user.emailId)" class="delete-button"><span class="delete-icon">&#128465;</span>Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

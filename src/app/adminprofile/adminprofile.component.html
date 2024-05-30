@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-anavbar></app-anavbar>
+    <div class="user-details" *ngIf="admindata">
+        <h2>First Name: {{ admindata.FirstName }}</h2>
+        <h2>Last Name: {{ admindata.LastName }}</h2>
+        <h2>Email: {{ admindata.EmailId }}</h2>
+        <h2>Phone Number: {{ admindata.PhoneNo }}</h2>
+    </div>
+    <button class="register-button" (click)="logout()">Logout</button>
+</body>
+</html>

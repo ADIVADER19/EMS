@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Details</title>
+</head>
+<body>
+ 
+<div class="event-details">
+<div class="banner">
+    <img src="{{eventdet.imageUrl}}" alt="Event Banner">
+</div>
+<div class="details">
+<h2>Event Name : {{eventdet.name}}</h2>
+<p> Start Date: {{eventdet.startDate}}</p>
+<p>End Date: {{eventdet.endDate}}</p>
+<p>Event Type: {{eventdet.eventType}}</p>
+<p>Venue: {{eventdet.venue}}</p>
+<p>Description: {{eventdet.description}}</p>
+<p>Cost of Event:Rs {{eventdet.cost}}</p>
+<p>Contact Details {{eventdet.contact}}</p>
+
+<button (click)="registerevent()">Register Now</button>
+</div>
+</div>
+ 
+</body>
+</html>

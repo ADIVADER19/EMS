@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-navbar></app-navbar>
+    <div class="feedback-container">
+        <h1>Enter Feedback</h1>
+        <form>
+          <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" class="form-control" [(ngModel)]="Subject" required>
+          </div>
+          <div class="form-group">
+            <label>Type of Feedback:</label><br>
+            <label><input type="radio" name="feedbackType" value="positive" [(ngModel)]="FeedbackType"> Positive</label><br>
+            <label><input type="radio" name="feedbackType" value="negative" [(ngModel)]="FeedbackType"> Negative</label><br>
+            <label><input type="radio" name="feedbackType" value="mixed" [(ngModel)]="FeedbackType"> Mixed</label>
+          </div>
+          <div class="form-group">
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" class="form-control" rows="5" [(ngModel)]="Content" required></textarea>
+          </div>
+          <button (click)="PostFeedback()" class="btn btn-primary">Submit Feedback</button>
+        </form>
+      </div>
+      
+</body>
+</html>

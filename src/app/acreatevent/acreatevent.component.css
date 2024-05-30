@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Set your desired background color */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto; /* Adjust the margin as needed for centering */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Set your desired background color */
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-half {
+    width: calc(50% - 10px); /* Adjust spacing between form halves */
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  .submit-section {
+    text-align: center;
+    clear: both;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  input[type="date"],
+  input[type="time"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  /* Add spacing between form sections */
+  .form-half {
+    width: calc(50% - 20px); /* Adjust spacing between form halves */
+    margin-right: 20px; /* Add margin between form halves */
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* Add spacing between form sections */
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  /* Adjust input field width and add padding */
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  input[type="date"],
+  input[type="time"] {
+    width: calc(100% - 18px); /* Adjust input field width */
+    padding: 8px; /* Add padding */
+    margin-bottom: 15px; /* Increase margin bottom */
+  }
+  
+  /* Adjust button padding */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px; /* Adjust button padding */
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  /* Adjust the width of the input field and remove margin-bottom for the image URL */
+  #imageurl {
+    width: calc(100% - 18px); /* Adjust input field width */
+    padding: 8px; /* Add padding */
+    margin-bottom: 0; /* Remove margin bottom */
+  }
+  
+  /* Swap positions of category and image URL */
+  #category {
+    margin-bottom: 15px; /* Increase margin bottom */
+  }
+  

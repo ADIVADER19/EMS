@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="login-header">Welcome to Events Galore</h1>
+    <h2 class="login-header">Login</h2>
+    <div class="tabs">
+      <button class="tab active" (click)="toggleTab('User')">User Login</button>
+      <button class="tab" (click)="toggleTab('Admin')">Admin Login</button>
+    </div>
+    <div *ngIf="selectedTab==='User'" class="tab-content active" id="user">
+      <h1>Hello! User</h1>
+      <label for="email"><b>Email</b></label>
+      <input [(ngModel)]=userData.EmailId type="text" placeholder="Enter Email" name="email" required>
+      <label for="psw"><b>Password</b></label>
+      <input [(ngModel)]=userData.Password type="password" placeholder="Enter Password" name="psw" required>
+      <button (click)="loginUser()" type="submit">Login</button>
+      <p>Don't have an account? <a href="/register">Register</a></p>
+    </div>
+    <div *ngIf="selectedTab==='Admin'" class="tab-content active" id="admin">
+      <h1>Hello! Admin</h1>
+      <label for="admin-email"><b>Email</b></label>
+      <input [(ngModel)]=adminData.EmailId type="text" placeholder="Enter Email" name="admin-email" required>
+      <label for="admin-psw"><b>Password</b></label>
+      <input [(ngModel)]=adminData.Password type="password" placeholder="Enter Password" name="admin-psw" required>
+      <button (click)="loginAdmin()" type="submit">Login</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-anavbar></app-anavbar>
+    <div class="feedback-container">
+        <div class="filter-section">
+          <label>Filter by:</label>
+          <button class="filter-btn" [class.active]="selectedFilter === 'all'" (click)="filterFeedbacks('all')">All</button>
+          <button class="filter-btn" [class.active]="selectedFilter === 'positive'" (click)="filterFeedbacks('positive')">Positive</button>
+          <button class="filter-btn" [class.active]="selectedFilter === 'negative'" (click)="filterFeedbacks('negative')">Negative</button>
+          <button class="filter-btn" [class.active]="selectedFilter === 'mixed'" (click)="filterFeedbacks('mixed')">Mixed</button>
+        </div>
+      
+        <div class="feedback-list">
+          <div *ngFor="let feedback of filteredFeedbacks" class="feedback-card">
+            <button class="feedback-type-btn" [ngClass]="feedback.feedBackType">{{ feedback.feedBackType }}</button>
+            <div class="subject">{{ feedback.subject }}</div>
+            <div class="content">{{ feedback.content }}</div>
+          </div>
+        </div>
+      </div>      
+</body>
+</html>

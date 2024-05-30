@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div class="user-details" *ngIf="userDetails">
+        <h2>First Name : {{ userDetails.FirstName }}</h2>
+        <h2>Last Name : {{userDetails.LastName}}</h2>
+        <h2>Email: {{ userDetails.EmailId }}</h2>
+        <h2>Phone Number: {{ userDetails.PhoneNo }}</h2>
+        <button class="register-button" (click)="logout()">Logout</button>
+      </div>
+      <div class="tabs">
+        <button (click)="toggleTab('created')">Created Events</button>
+        <button (click)="toggleTab('registered')">Registered Events</button>
+      </div>
+      
+      <div class="tab-content" *ngIf="selectedTab === 'created'">
+        <div *ngFor="let event of userDetails.CreatedEvents" class="event-card">
+          <img src="{{event.ImageUrl}}" class="photo" alt="Image" />
+          <h3>{{ event.Name }}</h3>
+          <p>Cost:{{event.Cost}}</p>
+          <p>Location: {{ event.Venue }}</p>
+          <p>Start Date:{{event.StartDate}}</p>
+          <p>End Date:{{event.EndDate}}</p>
+          <p>Time: {{event.Time}}</p>
+          <button (click)="cregisteredusers(event.EventId)">View Details</button>
+        </div>
+      </div>
+      
+      <div class="tab-content" *ngIf="selectedTab === 'registered'">
+        <div *ngFor="let event of userDetails.RegisteredEvents" class="event-card">
+          <img src="{{event.ImageUrl}}" class="photo" alt="Image" />
+          <h3>{{ event.Name }}</h3>
+          <p>{{ event.Description }}</p>
+          <p>Cost:{{event.Cost}}</p>
+          <p>Location: {{ event.Venue }}</p>
+          <p>Start Date:{{event.StartDate}}</p>
+          <p>End Date:{{event.EndDate}}</p>
+          <p>Time: {{event.Time}}</p>
+          <button (click)="rregisteredusers(event.EventId)">View details</button>
+        </div>
+      </div>

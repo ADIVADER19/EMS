@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-anavbar></app-anavbar>
+    <div class="container">
+        <div class="header">
+            <h1>Events Galore</h1>
+            <p>Discover our site features below</p>
+        </div>
+        <div class="box">
+            <div>
+                <h2>View User Details</h2>
+                <p>Filter users by name,email,age  and delete users</p>
+                <button  (click)="viewusers()">View Users</button>
+            </div>
+            <div>
+                <h2>View Events Details</h2>
+                <p>Filter events by category,name,price and delete events</p>
+                <button (click)="viewevents()">View Events</button>
+            </div>
+            <div>
+                <h2>View Feedback</h2>
+                <p>View feedback related to events and website</p>
+                <button  (click)="viewfeedback()">View Feedback</button>
+            </div>
+            <!-- <div>
+                <h2>Update Details</h2>
+                <p>Update Credentials</p>
+                <button (click)="viewevents()">View Events</button>
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>

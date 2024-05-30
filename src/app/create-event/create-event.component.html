@@ -1,0 +1,77 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <app-navbar></app-navbar>
+        <div class="container">
+            <h1>Create Event</h1>
+            <form>
+                <div class="form-half">
+                    <div class="form-section">
+                        <!-- First half of the form -->
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" [(ngModel)]="eventData.Name" name="Name" required>
+                    
+                        <label for="description">Description:</label>
+                        <textarea id="description" [(ngModel)]="eventData.Description" name="Description" required></textarea>
+                    
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="startDate" [(ngModel)]="eventData.StartDate" name="StartDate" required>
+                    
+                        <label for="endDate">End Date:</label>
+                        <input type="date" id="endDate" [(ngModel)]="eventData.EndDate" name="EndDate" required>
+                    
+            
+<label>Event Type:</label>
+<div>
+    <label>
+        <input type="radio" [(ngModel)]="eventData.EventType" name="EventType" value="Online" required> Online
+    </label>
+    <label>
+        <input type="radio" [(ngModel)]="eventData.EventType" name="EventType" value="Offline" required> Offline
+    </label>
+</div>
+                    
+                        <label for="venue">Venue/Link:</label>
+                        <input type="text" id="venue" [(ngModel)]="eventData.Venue" name="Venue" required>
+    
+                        <label for="imageurl">Image Url:</label>
+                        <input type="text" id="imageurl" [(ngModel)]="eventData.ImageUrl" name="ImageUrl" required>
+                    </div>
+                </div>
+                <div class="form-half">
+                    <div class="form-section">
+                        <!-- Second half of the form -->
+                        <label for="ageLimit">Age Limit:</label>
+                        <input type="number" id="ageLimit" [(ngModel)]="eventData.AgeLimit" name="AgeLimit" required>
+                    
+                        <label for="userLimit">User Limit:</label>
+                        <input type="number" id="userLimit" [(ngModel)]="eventData.UserLimit" name="UserLimit" required>
+    
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" [(ngModel)]="eventData.Time" name="Time" required>
+                    
+                        <label for="cost">Cost:</label>
+                        <input type="number" id="cost" [(ngModel)]="eventData.Cost" name="Cost" required>
+                    
+                        <label for="contact">Contact:</label>
+                        <input type="text" id="contact" [(ngModel)]="eventData.Contact" name="Contact" required>
+                    
+                        <label for="category">Category:</label>
+                        <input type="text" id="category" [(ngModel)]="eventData.Category" name="Category" required>
+                    </div>
+                </div>
+                <div class="form-section submit-section">
+                    <!-- Submit button -->
+                    <button (click)="submitForm()" type="submit">Create Event</button>
+                </div>
+            </form>
+        </div>    
+    </body>
+    </html>
+    
+   

@@ -1,0 +1,59 @@
+<!-- <app-navbar></app-navbar>
+<div class="container">
+  <div class="box">
+    <h2>Create Event</h2>
+    <p>Create your own event here!</p>
+    <button (click)="createevent()">Create</button>
+  </div>
+  <div class="box">
+    <h2>Register for Event</h2>
+    <p>Register for an event here!</p>
+    <button (click)="registerevent()">Register</button>
+  </div>
+</div> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-navbar></app-navbar>
+    <div class="container">
+        <div class="header">
+            <h1>Events Galore</h1>
+            <h1> {{greeting}} {{userDetails.FirstName}} {{userDetails.LastName}}</h1>
+            <p>Discover our site features below</p>
+        </div>
+        <div class="box">
+            <div>
+                <h2>Create Event</h2>
+                <p>Create an event easily within 5 minutes</p>
+                <button  (click)="createevent()">Create Now</button>
+            </div>
+            <div>
+                <h2>Register for events</h2>
+                <p>Register for events</p>
+                <button (click)="registerevent()">View Events</button>
+            </div>
+            <div>
+                <h2>Give Feedback</h2>
+                <p>Give feedback related to events and website</p>
+                <button  (click)="createfeedback()">Give Feedback</button>
+            </div>
+            <div>
+                <h2>View Profile</h2>
+                <p>View profile details and created and registered events</p>
+                <button  (click)="viewdetails()">View Profile</button>
+            </div>
+            <!-- <div>
+                <h2>Update Details</h2>
+                <p>Update Credentials</p>
+                <button (click)="updatedetails()">Update Details</button>
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>
+

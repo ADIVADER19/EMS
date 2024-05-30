@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<app-anavbar></app-anavbar>
+<h1 class="page-title">View Events</h1>
+<div class="filter-controls">
+<div class="filter-control">
+<label for="priceFilter">Price:</label>
+<input type="text" id="priceFilter" [(ngModel)]="priceFilter" placeholder="Enter price...">
+<button class="filter-button" (click)="filterByPrice()">Filter</button>
+</div>
+<div class="filter-control">
+<label for="categoryFilter">Category:</label>
+<input type="text" id="categoryFilter" [(ngModel)]="categoryFilter" placeholder="Enter category...">
+<button class="filter-button" (click)="filterByCategory()">Filter</button>
+</div>
+<div class="filter-control">
+<label for="dateFilter">Date:</label>
+<input type="date" id="dateFilter" [(ngModel)]="dateFilter" placeholder="Enter Date...">
+<button class="filter-button" (click)="filterByDate()">Filter</button>
+</div>
+</div>
+<div class="container">
+<div class="card" *ngFor="let event of events" class="event-card">
+<div class="card-details">
+  <img src="{{event.imageUrl||'https://static.vecteezy.com/system/resources/previews/000/091/709/original/vector-party-crowd-background.jpg'}}" class="photo" alt="Event Image">
+<h3>Title: {{ event.name }}</h3>
+<p>Location: {{ event.venue }}</p>
+<p>Start Date: {{ event.startDate }}</p>
+<p>End Date: {{ event.endDate }}</p>
+<p>Time: {{ event.time }}</p>
+<button class="register-button" (click)="viewdetails(event.eventId)">View Details</button>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+<body>
+
+<div class="login-container">
+  <div class="tabs">
+    <button id="userTab" class="tab" onclick="showUserLogin()">User</button>
+    <button id="adminTab" class="tab" onclick="showAdminLogin()">Admin</button>
+  </div>
+
+  <div id="userLogin" class="login-form">
+    <h2>User Login</h2>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+  </div>
+
+  <div id="adminLogin" class="login-form" style="display: none;">
+    <h2>Admin Login</h2>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+  </div>
+</div>
+
+<script>
+  function showUserLogin() {
+    document.getElementById("userLogin").style.display = "block";
+    document.getElementById("adminLogin").style.display = "none";
+  }
+
+  function showAdminLogin() {
+    document.getElementById("userLogin").style.display = "none";
+    document.getElementById("adminLogin").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
+

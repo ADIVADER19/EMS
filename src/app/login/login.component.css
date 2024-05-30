@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ccc; /* Grey background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-header {
+  color: #007bff; /* Header color */
+  margin-bottom: 20px; /* Added margin */
+}
+
+.tabs {
+  margin-bottom: 20px;
+}
+
+.tab {
+  background-color: #007bff; /* Button background color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab.active {
+  background-color: #0056b3; /* Active button background color */
+}
+
+.tab.clicked {
+  background-color: #003366; /* Dark blue when clicked */
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 20px);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #007bff; /* Button background color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Button hover background color */
+}
+
+button:active {
+  background-color: #003366; /* Dark blue when clicked */
+}
+
+p {
+  margin-top: 15px;
+}
+
+a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
